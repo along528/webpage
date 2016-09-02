@@ -143,15 +143,19 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>I am transitioning to Data Science from particle physics. I recently 
-		    received my PhD from Boston University. I did my undergrad at UNC - Chapel Hill.
-		    I worked in the Insight program.
-		    Want to help people.
+                    <p>I recently graduated with my PhD in Particle Physics from Boston University
+		    where I was on the <a href="http://atlas.cern/" style="color: #043149">ATLAS Experiment</a> at CERN.
+		    I am passionate about using data-driven insights to help people solve real world problems,
+		    which is why I am now a Fellow in the <a href="http://insighthealthdata.com" style="color: #043149">Insight Health Data Science Program</a>.
+		    There, I am learning how best to take the data analysis 
+		    skills I have learned as a particle physicist and apply
+		    them in the field of Data Science. 
 		    </p>
                 </div>
                 <div class="col-lg-4">
                     <p>
-		    If I'm not working and the opportunity arises
+		    I like to work hard and play hard.
+		    When I'm not working and the opportunity arises
 		    I like to go sailing on the Charles
 		    River or snowboarding in the Alps. I'm 
 		    passionate about discovering new and/or odd music
@@ -240,13 +244,7 @@
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="https://www.facebook.com/lbrian599" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
                                 <a href="https://github.com/along528" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/along528" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
                             <li>
                                 <a href="https://www.linkedin.com/in/along528" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
@@ -290,23 +288,114 @@
                         <div class="modal-body">
                             <h2>Insight Health Data Science Fellows Program</h2>
                             <hr class="star-primary">
+                	    <div class="col-lg-16 text-left">
+                            <img src="img/portfolio/Insight-logo.jpg" class="img-responsive" alt="">
+
+                            <p> The Insight Health Data Science program is an intensive, seven week postdoctoral training 
+			    fellowship that bridges the gap between academic research and a career in data science. 
+			    In the first week of the program we come up with a project idea which is to be predictive and 
+			    functional as a working web application. Once we have developed an idea, we spend the next three 
+			    weeks building the project independently from scratch. The remainder of the time is spent showing off our 
+			    projects and learning together about all sorts of data science related topics.</p>
+			    <p> When I was coming up with an idea for my Insight project I knew I wanted to do something 
+			    that addressed an issue confronting society head on. One particular issue that has concerned me
+			    a lot recently is the issue of police violence that has gotten so much attention recently, 
+			    especially through the sharing of cell phone videos over social media. Furthermore, 
+			    so many of these incidents seem to be occuring in the black community
+			    making it plain to see that police profiling is still pervasive in the US.</p>
+			    <p>
+			    I wondered, is it possible to compare 
+			    police departments that are most susceptible to racial profiling using publicly available data? 
+			    It turns out that we can using traffic stop data, which is publicly available in some states.
+			    My home state of North Carolina <a href="https://opendatapolicingnc.com/">recently released an API </a>
+			    of nearly every known traffic stop in the state since 2002. That ends up being over 20 million traffic stops!
+			    Other states have similar efforts though the quality and availability of the data drops off very quickly.
+			    In the end, I was able to also obtain traffic stop 
+			    data from <a href="http://ctrp3.ctdata.org/">Connecticut</a> and 
+			    <a href="https://idot.illinois.gov/transportation-system/local-transportation-partners/law-enforcement/illinois-traffic-stop-study">Illinois</a> as well, resulting in a decent sample from 
+			    around the US totaling over 50 million traffic stops altogether.</p>
+			    <p>
+			    Each of these 50 million traffic stop 
+			    records has demographic information about the driver and the police department
+			    that the officer who performed the stop was affiliated with. Each record also 
+			    has information about whether or not the driver was searched, and if so, if they found
+			    any contraband (weapons, drugs, etc). I used that information to compare the experience
+			    of black drivers and white drivers after being stopped by police officers from different departments.
+			    The results were striking. 
                             <img src="img/portfolio/search_rate_disparity.png" class="img-responsive img-centered" alt="">
-                            <p>This is my insight project. Make it read like a blog post</p>
+			    <p>
+			    The above chart shows the average search 
+			    rate (the rate at which someone is searched given that they were stopped)
+			    and average hit rate (the rate at which contraband is found given that someone is searched) for a given 
+			    police department after controlling for the race of the driver. So, a red point corresponds
+			    to the average rates for black drivers in a single police department. Similarly, each blue point
+			    shows the average rates for white drivers. Comparing the distributions of search rates for
+			    black drivers to that of white drivers, we can clearly see that police departments tend to 
+			    search black drivers more often than white drivers. In fact, the average police department
+			    searches black drivers about twice as often as white drivers. But there is also a long high
+			    tail, with some police departments searching black drivers even more often than white drivers.
+			    For instance, the Chicago Police Department has on average searched black drivers about 6 times
+			    as often as white drivers since 2003.
+			    </p>
+			    <p>
+			    Furthermore, the huge disparity between the search rate for black and white drivers does not seem to
+			    be justified by a higher rate of finding contraband in searches, or the hit rate. Indeed,
+			    the same chart shows that the distribution of the hit rate for black and white drivers
+			    is nearly identical. So, according to the traffic stop data in these three states, 
+			    black drivers are more likely to be searched than white drivers
+			    even though they are not more likely to have contraband. This looks to me like very clear evidence
+			    of racial profiling. Thus, by using the disparity between the search rate for black
+			    drivers and white drivers I can do what I set out to do: compare departments based on their 
+			    susceptibility to racial profiling.
+			    </p>
+
+			    <p>
+			    It is also fascinating to note that in many places, this difference
+			    in the search rate between black and white drivers is fairly persistent.
+			    I looked at the ratio of the search rate for black drivers over
+			    the search rate for white drivers over 14 years in the three largest 
+			    police departments in North Carolina. 
+			    </p>
+                            <img src="img/rpsi_vs_time.png" class="img-responsive" alt="">
+			    <p>
+			    There what you see is that each of these departments have had
+			    a very different level of racial profiling that has been
+			    roughly the same over more than a decade. 
+			    Every year since at least 2002
+			    the Charlotte-Mecklenburg Police Department on average has 
+			    searched
+			    black drivers about twice as often as white drivers. Meanwhile,
+			    the Guilford County Sheriff's Office has shown almost no disparity at all
+			    and the Wake County Sherrif's Office has fallen somewhere in between.
+			    This stationary behavior of the departments supports
+			    using the average of the search rates over time. It also 
+			    tells us that these differences are seemingly hardwired
+			    into the police departments and the communities they serve 
+			    and have been around for a long time. 
+			    </p>
+
+
+	                    <!--
+			    <p>
+			    But this is only for 3 states. And what if we could try to explain
+			    some of the differences between these places?
+			    So I built a web application called <a href="http://areyouprofiling.me">areyouprofiling.me</a>
+			    that allows individuals to look into how susceptible their police department is to police profiling
+			    and why.</p>
+                            <img src="img/app1.png" class="img-responsive" alt="">
+                            <img src="img/app2.png" class="img-responsive" alt="">
+                            <img src="img/app3.png" class="img-responsive" alt="">
+                            <h3>Insight Project: Are you profiling Me?</h3>
+			    -->
+			    </div>
                             <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
                                 <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    <strong>Sep 2016
                                     </strong>
                                 </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+			    
                         </div>
                     </div>
                 </div>
@@ -345,11 +434,14 @@
 			    I've spent the last 6 years working on the ATLAS experiement. Most of that time
 			    I was looking at the petabytes of proton-proton collision data collected by the experiement.
 			    You might recall the famous
-			    discovery of the Higgs boson announced on July 4th, 2012 (Higgsdependence day). <!-- link, picture? -->
-			    <br>
+			    discovery of the Higgs boson announced on July 4th, 2012 - Higgsdependence day. <!-- link, picture? -->
+			    </p>
                             <img src="img/frontpage_higgs.jpg" class="img-responsive img-centered" alt="">
+			    <p>
 			    Well, there's me watching the big announcement! (I seem to have made it into an Italian newspaper.)
+			    </p>
                             <img src="img/me_higgs.png" class="img-responsive img-centered" alt="">
+			    <p>
 			    That was a once in a lifetime discovery which used the same data.  
 			    But that data is very rich and so can be looked at in myriad ways.
 			    Some analyses of the data attempt to discover other new particles besides the Higgs; 
@@ -369,7 +461,9 @@
 			    We compared the data to what we would expect if the only the Standard Model were true (the null hypothesis)
 			    and if the W-prime signal were added in on top of that (the alternative hypothesis).  You can see a plot of just such a comparison
 			    as a function of the most interesting discriminating variable.
+			    </p>
                             <img src="img/wprime_muon_mt.png" class="img-responsive img-centered" alt="">
+			    <p>
 			    The data is in black, while the standard model prediction is shown in the solid stacked histograms and the proposed signals
 			    are drawn on top as individual lines.  As you can see, the data agrees really well with the Standard Model and has no need
 			    for the proposed signal.  So we looked and didn't find it.
@@ -400,7 +494,9 @@
 			    at which they occur, has important consequences for the Standard Model. Others have looked at many of these production
 			    mechanisms, but none had ever before attempted to look at the production of three W bosons simultaneously. 
 			    A particle physicist would represent this process using a Feynman Diagram like this:
+			    </p>
                             <img src="img/www_qgc.png" class="img-responsive img-centered" alt="">
+			    <p>
 			    where the protons come in from the left and the three W bosons come out on the right.
 			    Being the first to look for this type of process presented unique challenges for understanding and interpreting the data, 
 			    which I was involved deeply in every step of the way.
