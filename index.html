@@ -294,33 +294,35 @@
                             <p> The Insight Health Data Science program is an intensive, seven week postdoctoral training 
 			    fellowship that bridges the gap between academic research and a career in data science. 
 			    In the first week of the program we come up with a project idea which is to be predictive and 
-			    functional as a working web application. Once we have developed an idea, we spend the next three 
+			    functional as a working data product and 
+			    web application. Once we have developed an idea, we spend the next three 
 			    weeks building the project independently from scratch. The remainder of the time is spent showing off our 
 			    projects and learning together about all sorts of data science related topics.</p>
 			    <p> When I was coming up with an idea for my Insight project I knew I wanted to do something 
 			    that addressed an issue confronting society head on. One particular issue that has concerned me
-			    a lot recently is the issue of police violence that has gotten so much attention recently, 
-			    especially through the sharing of cell phone videos over social media. Furthermore, 
-			    so many of these incidents seem to be occurring in the black community
+			    a lot recently is the issue of police violence , something which has had a lot of
+			    light shed on it through the sharing of cell phone videos over social media. 
+			    Furthermore, so many of these incidents seem to be occurring in the black community
 			    making it plain to see that police profiling is still pervasive in the US.</p>
 			    <p>
 			    I wondered, is it possible to compare 
-			    police departments that are most susceptible to racial profiling using publicly available data? 
-			    It turns out that we can using traffic stop data, which is publicly available in some states.
+			    police departments that are most susceptible to racial profiling by using publicly available data? 
+			    One way to probe this is to look at traffic stop data, which is publicly available in some states.
 			    My home state of North Carolina <a href="https://opendatapolicingnc.com/">recently released an API </a>
 			    of nearly every known traffic stop in the state since 2002. That ends up being over 20 million traffic stops!
 			    Other states have similar efforts though the quality and availability of the data drops off very quickly.
 			    In the end, I was able to also obtain traffic stop 
 			    data from <a href="http://ctrp3.ctdata.org/">Connecticut</a> and 
-			    <a href="https://idot.illinois.gov/transportation-system/local-transportation-partners/law-enforcement/illinois-traffic-stop-study">Illinois</a> as well, resulting in a decent sample from 
+			    <a href="https://idot.illinois.gov/transportation-system/local-transportation-partners/law-enforcement/illinois-traffic-stop-study">Illinois</a>, resulting in a decent sample from 
 			    around the US totaling over 50 million traffic stops altogether.</p>
 			    <p>
 			    Each of these 50 million traffic stop 
-			    records has demographic information about the driver and the police department
-			    that the officer who performed the stop was affiliated with. Each record also 
-			    has information about whether or not the driver was searched, and if so, if they found
-			    any contraband (weapons, drugs, etc). I used that information to compare the experience
-			    of black drivers and white drivers after being stopped by police officers from different departments.
+			    records has demographic information about the driver and police department affiliation of the officer
+			    who performed the stop.  Each record also 
+			    has information about whether or not the driver was searched, and if so, if any contraband 
+			    was found (weapons, drugs, etc).
+			    I used that information to compare the experience
+			    of black drivers and white drivers after being stopped and how this varies by department.
 			    The results were striking. 
                             <img src="img/portfolio/search_rate_disparity.png" class="img-responsive img-centered" alt="">
 			    <p>
@@ -335,15 +337,13 @@
 			    searches black drivers about twice as often as white drivers. But there is also a long high
 			    tail, with some police departments searching black drivers even more often than white drivers.
 			    For instance, the Chicago Police Department has on average searched black drivers about 6 times
-			    as often as white drivers since 2003.
-			    </p>
-			    <p>
-			    Furthermore, the huge disparity between the search rate for black and white drivers does not seem to
-			    be justified by a higher rate of finding contraband in searches, or the hit rate. Indeed,
-			    the same chart shows that the distribution of the hit rate for black and white drivers
+			    as often as white drivers since 2003. <!-- t-test --> 
+			    The huge disparity between the search rate for black and white drivers does not seem to
+			    be justified by a higher hit rate.  Instead,
+			    what we see from the same chart is that the distribution of the hit rate for black and white drivers
 			    is nearly identical. So, according to the traffic stop data in these three states, 
 			    black drivers are more likely to be searched than white drivers
-			    even though they are not more likely to have contraband. This looks to me like very clear evidence
+			    even though they are not more likely to have contraband. This looks like very clear evidence
 			    of racial profiling. Thus, by using the disparity between the search rate for black
 			    drivers and white drivers I can do what I set out to do: compare departments based on their 
 			    susceptibility to racial profiling.
@@ -358,7 +358,7 @@
 			    </p>
                             <img src="img/rpsi_vs_time.png" class="img-responsive" alt="">
 			    <p>
-			    There what you see is that each of these departments have had
+			    There what we see is that each of these departments have had
 			    a very different level of racial profiling that has been
 			    roughly the same over more than a decade. 
 			    Every year since at least 2002
@@ -419,7 +419,7 @@
                 	    <div class="col-lg-16 text-left">
                             <img src="img/atlas_graffiti.png" class="img-responsive img-centered" alt="">
                             <p>The ATLAS experiment is an enormous collaboration of over 3000 
-			    scientists from around 40 countries <!-- check -->
+			    scientists from around 40 countries 
 			    interested in studying the millions of proton-proton collisions
 			    produced by the Large Hadron Collider (LHC) at CERN in Geneva, Switzerland.
 			    To do that they built one of the largest and most complex machines in the world.
@@ -427,8 +427,8 @@
 			    Cathedral in Paris, it's like a giant 100 million pixel camera with a shutter speed capable
 			    of taking a picture 40 million times a second
 			    and with a resolution on the order of microns. It's an impressive machine! 
-			    The picture above is of a mural painted of the detector outside the ATLAS control room;
-			    though the real thing may be even more beautiful.  </p>
+			    The picture above is of a mural painted of the detector outside the ATLAS control room.
+			    Although, the real thing may be even more beautiful.  </p>
                             <img src="img/atlas-detector.jpg" class="img-responsive img-centered" alt="">
 			    <p>
 			    I've spent the last 6 years working on the ATLAS Experiment. Most of that time
@@ -442,13 +442,12 @@
 			    </p>
                             <img src="img/me_higgs.png" class="img-responsive img-centered" alt="">
 			    <p>
-			    That was a once in a lifetime discovery which used the same data.  
-			    But that data is very rich and so can be looked at in myriad ways.
+			    That was a once in a lifetime discovery.
+			    But the data used to make the discovery is very rich and so can be looked at in myriad ways.
 			    Some analyses of the data attempt to discover other new particles besides the Higgs; 
-			    other analyses use the data simply to better understand the performance and behavior of the massively complicated detector in order to aid 
-			    in future analyses;
+			    other analyses use the data to better understand the performance and behavior of the machine itself;
 			    still others seek to test the validity of our current best description of the universe, the so-called 
-			    Standard Model.  I have been involved in analyses of all three types. 
+			    Standard Model.  I have been involved in analyses of each kind. 
 			    </p>
 			    
                             <h3>Searching for the W-prime</h3>
